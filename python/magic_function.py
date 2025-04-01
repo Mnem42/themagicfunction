@@ -23,7 +23,7 @@ class CodeRunner:
 
         print("\033[K", self._select_random(), "\n")
 
-    def run_code_tk(self):
+    def run_code_gui(self):
         root = tk.Tk()
 
         root.title("Magic function")
@@ -48,7 +48,7 @@ if __name__ == "__main__":
             case "1":
                 CodeRunner(strings).run_code_cli()
             case "2":
-                CodeRunner(strings).run_code_tk()
+                CodeRunner(strings).run_code_gui()
                 print("")
             case "3":
                 print(open("LICENSE.txt").read(),'\n')
