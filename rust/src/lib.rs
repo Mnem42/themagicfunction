@@ -1,16 +1,19 @@
+use rand::Rng;
+
 pub struct CodeRunner{
     strings: Vec<String>
 }
 
 impl CodeRunner{
-    fn new(strings: Vec<String>) -> Self{
+    pub fn new(strings: &[String]) -> Self{
         CodeRunner{
-            strings
+            strings:strings.to_vec()
         }
     }
 
-    fn run_code_cli(){
-        println!("Test");
+    pub fn run_code_cli(self){
+        let mut rng = rand::rng();
+        println!("{}",self.strings[rng.random_range(0..self.strings.len())]);
     }
 }
 
