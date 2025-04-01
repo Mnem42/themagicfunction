@@ -1,4 +1,4 @@
-# The magic functions
+# The magic function
 
 Defines a class named `CodeRunner` in various languages to magically do whatever
 your code needs to do. This class contains two public functions: `run_code_cli`
