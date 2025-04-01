@@ -1,14 +1,26 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+pub struct CodeRunner{
+    strings: Vec<String>
+}
+
+impl CodeRunner{
+    fn new(strings: Vec<String>) -> Self{
+        CodeRunner{
+            strings
+        }
+    }
+
+    fn run_code_cli(){
+        println!("Test");
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
+    /*#[test]
     fn it_works() {
         let result = add(2, 2);
         assert_eq!(result, 4);
-    }
+    }*/
 }
